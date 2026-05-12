@@ -15,7 +15,7 @@ _LOGO_CSS = '''
     margin-top: 0.5rem;
 }
 html, body, [class*="css"] {
-    font-size: 18px !important;
+    font-size: 20px !important;
 }
 </style>
 '''
