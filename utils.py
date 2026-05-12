@@ -14,6 +14,9 @@ _LOGO_CSS = '''
     width: auto !important;
     margin-top: 0.5rem;
 }
+html, body, [class*="css"] {
+    font-size: 18px !important;
+}
 </style>
 '''
 
