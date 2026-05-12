@@ -26,7 +26,7 @@ SPLIT_COUNTS = {
 def load_train():
     return pd.read_csv(ROOT / 'dataset/NBA_Train.csv')
 
-st.title('📊 Data Overview & EDA')
+st.title('Data Overview & EDA')
 st.markdown(
     'Explore the dataset used to train and evaluate the NBA Draft classifiers. '
     'The data covers NCAA players from **2009 to 2021** with college statistics, '

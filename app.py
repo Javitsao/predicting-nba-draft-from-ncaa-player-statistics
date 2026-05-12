@@ -10,7 +10,7 @@ st.set_page_config(
 
 setup_logo()
 
-st.title('🏀 NBA Draft Predictor')
+st.title('NBA Draft Predictor')
 
 st.markdown('''
 Predict whether an NCAA basketball player will be selected in the **NBA Draft** —

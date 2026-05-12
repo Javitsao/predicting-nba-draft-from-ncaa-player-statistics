@@ -82,10 +82,9 @@ def per_class_metrics(cm):
     return pd.DataFrame(rows).set_index('Class')
 
 #Page
-st.title('📈 Model Evaluation')
+st.title('Model Evaluation')
 st.markdown(
     'Compare all three from-scratch classifiers on the **test set (2020–2021)**. '
-    'All models use NumPy only — no scikit-learn, TensorFlow, or PyTorch.'
 )
 
 #Summary table

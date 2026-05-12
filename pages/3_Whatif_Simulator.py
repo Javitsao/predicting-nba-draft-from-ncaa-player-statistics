@@ -98,7 +98,7 @@ def show_prediction_card(probs):
     st.plotly_chart(fig, use_container_width=True)
 
 #Page
-st.title('🧪 What-if Simulator')
+st.title('What-if Simulator')
 st.markdown(
     'Design a hypothetical prospect. Choose a **template** to set realistic baseline '
     'stats for that tier, then fine-tune the per-game numbers you care about.'

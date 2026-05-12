@@ -164,7 +164,7 @@ def show_bar_profile(row):
     st.plotly_chart(fig, use_container_width=True)
 
 #Page
-st.title('🏀 Draft Projection')
+st.title('Draft Projection')
 st.markdown("Search any player from the **2020–2021** test seasons to see the MLP's draft prediction.")
 
 df = load_data()
