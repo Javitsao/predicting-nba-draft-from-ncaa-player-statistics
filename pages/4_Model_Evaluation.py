@@ -92,9 +92,9 @@ st.markdown('---')
 st.subheader('Overall Performance Summary')
 
 summary = pd.DataFrame([
-    {'Model': 'Logistic Regression', 'Test Accuracy': '93.3%', 'Test Macro-F1': '0.417', 'Test AUROC': '0.942', 'Selected': ''},
-    {'Model': 'KNN (k=3)', 'Test Accuracy': '96.8%', 'Test Macro-F1': '0.474', 'Test AUROC': '0.722', 'Selected': ''},
-    {'Model': 'MLP (1 hidden, 16 units)', 'Test Accuracy': '97.2%', 'Test Macro-F1': '0.527', 'Test AUROC': '0.959', 'Selected': 'Best'}
+    {'Model': 'Logistic Regression', 'Test Accuracy': '94.7%', 'Test Macro-F1': '0.443', 'Test AUROC': '0.942', 'Selected': ''},
+    {'Model': 'KNN (k=3)', 'Test Accuracy': '96.8%', 'Test Macro-F1': '0.470', 'Test AUROC': '0.722', 'Selected': ''},
+    {'Model': 'MLP (1 hidden, 16 units)', 'Test Accuracy': '97.9%', 'Test Macro-F1': '0.531', 'Test AUROC': '0.952', 'Selected': 'Best'}
 ]).set_index('Model')
 
 st.dataframe(summary, use_container_width=True)
