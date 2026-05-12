@@ -157,8 +157,8 @@ with col_right:
     pts = st.slider('Points per game', 0.0, 40.0, round(float(base.get('pts', 14)), 1), step=0.5)
     efg = st.slider('Effective FG%', 0.0, 80.0, round(float(base.get('eFG', 50)), 1), step=0.5)
     ts = st.slider('True Shooting%', 0.0, 80.0, round(float(base.get('TS_per', 55)), 1), step=0.5)
-    tp = st.slider('3-Point%', 0.0, 60.0, round(float(base.get('TP_per', 35)), 1), step=0.5)
-    ft = st.slider('Free Throw%', 0.0, 100.0, round(float(base.get('FT_per', 72)), 1), step=0.5)
+    tp = st.slider('3-Point%', 0.0, 60.0, round(float(base.get('TP_per', 0.35)) * 100, 1), step=0.5)
+    ft = st.slider('Free Throw%', 0.0, 100.0, round(float(base.get('FT_per', 0.72)) * 100, 1), step=0.5)
     usg = st.slider('Usage Rate', 0.0, 40.0, round(float(base.get('usg', 20)), 1), step=0.5)
 
     st.subheader('Other Skills')
@@ -177,8 +177,8 @@ if run_btn:
     row.update({
         'GP': float(gp), 'Min_per': float(min_per), 'pts': float(pts),
         'treb': float(treb), 'ast': float(ast), 'stl': float(stl), 'blk': float(blk),
-        'eFG': float(efg), 'TS_per': float(ts), 'TP_per': float(tp),
-        'FT_per': float(ft), 'usg': float(usg), 'yr_num': float(yr_num),
+        'eFG': float(efg), 'TS_per': float(ts), 'TP_per': float(tp) / 100.0,
+        'FT_per': float(ft) / 100.0, 'usg': float(usg), 'yr_num': float(yr_num),
         'ht_inches': float(ht_inches), 'bpm': float(bpm),
         'obpm': float(bpm) * 0.6, 'dbpm': float(bpm) * 0.4,
         'Rec Rank': float(rec_rank)
