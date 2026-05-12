@@ -235,6 +235,9 @@ if 'prob_undrafted' in mlp_preds.columns and 'true_draft_status' in mlp_preds.co
     )
     col_name = existing[score_col]
 
+    use_log = st.toggle("Log scale (Y-axis)", value=True,
+                        help="Log scale makes rare drafted classes visible alongside the large undrafted bar")
+
     fig_dist = go.Figure()
     for cls_id, cls_name in enumerate(CLASS_NAMES):
         subset = mlp_preds[mlp_preds['true_draft_status'] == cls_id][col_name].dropna()
@@ -249,7 +252,8 @@ if 'prob_undrafted' in mlp_preds.columns and 'true_draft_status' in mlp_preds.co
         barmode='overlay',
         title=f'Distribution of P({score_col}) by True Class',
         xaxis_title=f'P({score_col})',
-        yaxis_title='Count',
+        yaxis_title='Count (log scale)' if use_log else 'Count',
+        yaxis_type='log' if use_log else 'linear',
         height=380,
         margin=dict(l=10, r=10, t=40, b=10),
         legend=dict(orientation='h', y=-0.2)
